@@ -110,12 +110,12 @@ export default function Auth() {
           Continue with Google
         </button>
 
-        <p 
-          className="mt-6 text-lg cursor-pointer hover:underline font-serif"
-          style={{ color: '#3B82F6' }}
-        >
-          Already have a Vision-tracker?
-        </p>
+          <p 
+            className="mt-6 text-lg cursor-pointer hover:underline"
+            style={{ color: '#3B82F6' }}
+          >
+            Already have a Vision-tracker?
+          </p>
 
         <p 
           className="mt-4 text-sm"
