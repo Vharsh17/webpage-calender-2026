@@ -11,59 +11,88 @@ export default function Auth() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f5f5f5] flex items-center justify-center relative overflow-hidden">
-      <div 
-        className="absolute top-[180px] left-[120px] px-8 py-3 rounded-full text-2xl font-serif transform -rotate-6"
-        style={{ backgroundColor: '#FEF9C3', color: '#1a1a1a' }}
+    <div 
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      style={{ backgroundColor: '#f5f5f5' }}
+    >
+      <span 
+        className="absolute font-serif italic text-2xl px-6 py-2 rounded-full"
+        style={{ 
+          backgroundColor: '#FEF9C3', 
+          color: '#1a1a1a',
+          top: '200px',
+          left: '180px',
+          transform: 'rotate(-8deg)'
+        }}
       >
         Events
-      </div>
+      </span>
       
-      <div 
-        className="absolute top-[220px] right-[140px] px-8 py-3 rounded-full text-2xl font-serif transform rotate-3"
-        style={{ backgroundColor: '#DBEAFE', color: '#1a1a1a' }}
+      <span 
+        className="absolute font-serif italic text-2xl px-6 py-2 rounded-full"
+        style={{ 
+          backgroundColor: '#DBEAFE', 
+          color: '#1a1a1a',
+          top: '260px',
+          right: '180px',
+          transform: 'rotate(5deg)'
+        }}
       >
         Journal
-      </div>
+      </span>
       
-      <div 
-        className="absolute bottom-[200px] left-1/2 transform translate-x-16 -rotate-6 px-8 py-3 rounded-full text-2xl font-serif"
-        style={{ backgroundColor: '#FBCFE8', color: '#1a1a1a' }}
+      <span 
+        className="absolute font-serif italic text-2xl px-6 py-2 rounded-full"
+        style={{ 
+          backgroundColor: '#FBCFE8', 
+          color: '#1a1a1a',
+          bottom: '220px',
+          left: '50%',
+          marginLeft: '40px',
+          transform: 'rotate(-12deg)'
+        }}
       >
         Habits
-      </div>
+      </span>
 
-      <div className="w-full max-w-md text-center z-10">
+      <div className="flex flex-col items-center z-10" style={{ width: '340px' }}>
         <h1 
-          className="font-serif mb-16"
-          style={{ fontSize: '5rem', fontWeight: 400, color: '#1a1a1a' }}
+          className="font-serif mb-12"
+          style={{ 
+            fontSize: '4.5rem', 
+            fontWeight: 400, 
+            color: '#1a1a1a',
+            letterSpacing: '-0.02em'
+          }}
         >
           Sign up
         </h1>
 
-        <div className="space-y-10 px-8">
-          <button
-            onClick={handleGoogleSignIn}
-            className="w-full py-5 px-8 rounded-2xl text-xl font-medium transition-opacity hover:opacity-90"
-            style={{ backgroundColor: '#1a1a1a', color: '#ffffff' }}
-          >
-            Continue with Google
-          </button>
+        <button
+          onClick={handleGoogleSignIn}
+          className="w-full py-4 rounded-2xl text-lg font-medium transition-opacity hover:opacity-90"
+          style={{ 
+            backgroundColor: '#1a1a1a', 
+            color: '#ffffff',
+            maxWidth: '340px'
+          }}
+        >
+          Continue with Google
+        </button>
 
-          <p 
-            className="text-lg cursor-pointer hover:underline"
-            style={{ color: '#3B82F6' }}
-          >
-            Already have a Vision-tracker?
-          </p>
+        <p 
+          className="mt-6 text-lg cursor-pointer hover:underline font-serif"
+          style={{ color: '#3B82F6' }}
+        >
+          Already have a Vision-tracker?
+        </p>
 
-          <p 
-            className="text-sm"
-            style={{ color: '#9CA3AF' }}
-          >
-            Terms & Conditions
-          </p>
-        </div>
+        <p 
+          className="mt-4 text-sm"
+          style={{ color: '#9CA3AF' }}
+        >
+          Terms & Conditions
+        </p>
       </div>
     </div>
   );
